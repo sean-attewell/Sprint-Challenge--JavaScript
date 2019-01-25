@@ -169,11 +169,14 @@ The zoos need to know their total animal population across the United States.  F
 */
 // const populationTotal = 0;
 
-function adder(acc, element) {
-  return acc + element.population;
-}
+// WORKING:
+// function adder(acc, element) {
+//   return acc + element.population;
+// }
 
-const populationTotal = zooAnimals.reduce(adder, 0)
+// const populationTotal = zooAnimals.reduce(adder, 0)
+
+const populationTotal = zooAnimals.reduce((acc, element) => acc + element.population, 0)
 
 console.log(populationTotal);
 
@@ -181,6 +184,6 @@ console.log(populationTotal);
 /* 
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
-
+// DONE
 */
 
